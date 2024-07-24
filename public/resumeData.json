@@ -1,45 +1,45 @@
 {
   "main": {
-    "name": "Ogeedeveloper",
+    "name": "Omaro Grant",
     "occupation": "Software Developer",
     "description": "I eat, sleep and breathe React",
     "image": "profilepic.jpg",
-    "bio": "Hi there! I am Sonny! You might also know me as PAPA React. I've been coding for over 10 years now. As a Full Stack developer I've worked both with startups and large corporations to help build & scale their companies. Along the journey I realised my passion existed in helping others excel and pursue their dreams as upcoming developers. With this passion, I have now trained thousand's of developers across the globe. Through live coaching sessions on Youtube, I have accumulated several MILLION views demonstrating how to apply developer skills in a range of cool builds and challenges. I deliver REAL VALUE by teaching REAL WORLD projects to help students enter the world of web development. You’ll get hands-on experience and learn the skills that are required to succeed in the real-world in this community.",
-    "contactmessage": "Get in touch with me to be a part of the PAPA fam!",
-    "email": "papareact.team@gmail.com",
-    "phone": "+44 1234567899",
+    "bio": "Hi there! I'm Omaro Grant. I've been immersed in software development for several years, specializing in building comprehensive projects for various clients. As a freelance developer, I've honed my skills across a diverse array of technologies, working independently to deliver solutions that meet unique business needs. My passion lies in crafting functional, well-designed software that enhances user experience and meets high performance standards. Each project is an opportunity to solve complex problems and push the boundaries of what I can create. Join me in exploring the fascinating world of software development, where each line of code leads to new discoveries.",
+    "contactmessage": "Get in touch with me!",
+    "email": "test@gmail.com",
+    "phone": "+18761234567890",
     "address": {
       "street": "123 Dev Lane",
-      "city": "London",
+      "city": "Jamaica",
       "state": "Devosphere",
       "zip": "W3B D3V"
     },
     "website": "https://ogeedeveloper.com",
-    "resumedownload": "http://papareact.com",
+    "resumedownload": "http://omarogrant.com",
     "social": [
       {
-        "name": "youtube",
-        "url": "https://www.youtube.com/channel/UCqeTj_QAnNlmt7FwzNwHZnA",
-        "className": "fa fa-youtube"
+        "name": "X(Formerly Twitter) ",
+        "url": "https://www.twitter.com/",
+        "className": "fa fa-twitter"
       },
       {
         "name": "facebook",
-        "url": "https://www.facebook.com/sonny.sangha.3",
+        "url": "https://www.facebook.com/",
         "className": "fa fa-facebook"
       },
       {
         "name": "linkedin",
-        "url": "https://www.linkedin.com/in/saajansangha",
+        "url": "https://www.linkedin.com/in/omaro-grant/",
         "className": "fa fa-linkedin"
       },
       {
         "name": "instagram",
-        "url": "https://www.instagram.com/ssssangha/",
+        "url": "https://www.instagram.com",
         "className": "fa fa-instagram"
       },
       {
         "name": "github",
-        "url": "https://github.com/PapaReact",
+        "url": "https://github.com/ogeeDeveloper",
         "className": "fa fa-github"
       }
     ]
@@ -48,28 +48,27 @@
     "skillmessage": "My Programming Language Proficiency",
     "education": [
       {
-        "school": "University of Kent - UK",
-        "degree": "Bachelor's Degree, Computer Science",
-        "graduated": "July 2016",
-        "description": "Graduated with First Class Honours"
+        "school": "Vocational and Training Development Institute - Kingston, Jamaica",
+        "degree": "Bachelor's Degree, Information and Communication Technology",
+        "graduated": "2022"
       }
     ],
     "work": [
       {
-        "company": "PAPA",
-        "title": "Founder and CEO",
-        "years": "May 2019 - Present",
-        "description": "Cloning all the apps possible. On the way to clone the world! Building the PAPA Fam as large as possible."
+        "company": "JMMB",
+        "title": "Software developer",
+        "years": "March 2022 - Present",
+        "description": "Working on creating digital solution bringing technology closer to users."
       }
     ],
     "skills": [
       {
         "name": "ReactJs",
-        "level": "100%"
+        "level": "80%"
       },
       {
-        "name": "Python",
-        "level": "85%"
+        "name": "Vuejs",
+        "level": "65%"
       },
       {
         "name": "Git",
@@ -77,11 +76,11 @@
       },
       {
         "name": "JavaScript",
-        "level": "99%"
+        "level": "80%"
       },
       {
         "name": "Web Development",
-        "level": "95%"
+        "level": "90%"
       }
     ]
   },
@@ -110,8 +109,8 @@
   "testimonials": {
     "testimonials": [
       {
-        "text": "Sonny is absolutely excellent, his depth of knowledge & his mentorship really meant a lot to us... I would definitely recommend",
-        "user": "Jorge Fouto"
+        "text": "Omaro, consistently delivers top-notch software solutions. His ability to tackle complex problems and produce flawless results under tight deadlines is nothing short of impressive. Highly recommend for anyone seeking a skilled and reliable developer!",
+        "user": "Jorge"
       },
       {
         "text": "Learning with Sonny has been AWESOME, he makes learning React so easy and approachable, you'll finally feel like you know what's going on!",
