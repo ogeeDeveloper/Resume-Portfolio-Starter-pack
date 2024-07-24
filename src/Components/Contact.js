@@ -17,7 +17,8 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const submitForm = () => {
+  const submitForm = (e) => {
+    e.preventDefault();
     window.open(
       `mailto:${contactEmail}?subject=${encodeURIComponent(
         subject
@@ -30,13 +31,10 @@ const Contact = ({ data }) => {
   return (
     <section id="contact">
       <div className="row section-head">
-        <div className="two columns header-col">
+        <div className="twelve columns header-col">
           <h1>
-            <span>Get In Touch.</span>
+            <span>Get In Touch</span>
           </h1>
-        </div>
-
-        <div className="ten columns">
           <p className="lead">{contactMessage}</p>
         </div>
       </div>
@@ -51,12 +49,12 @@ const Contact = ({ data }) => {
                 </label>
                 <input
                   type="text"
-                  defaultValue=""
                   value={name}
                   size="35"
                   id="contactName"
                   name="contactName"
                   onChange={(e) => setName(e.target.value)}
+                  required
                 />
               </div>
 
@@ -65,13 +63,13 @@ const Contact = ({ data }) => {
                   Email <span className="required">*</span>
                 </label>
                 <input
-                  type="text"
-                  defaultValue=""
+                  type="email"
                   value={email}
                   size="35"
                   id="contactEmail"
                   name="contactEmail"
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
 
@@ -79,7 +77,6 @@ const Contact = ({ data }) => {
                 <label htmlFor="contactSubject">Subject</label>
                 <input
                   type="text"
-                  defaultValue=""
                   value={subject}
                   size="35"
                   id="contactSubject"
@@ -99,11 +96,12 @@ const Contact = ({ data }) => {
                   onChange={(e) => setMessage(e.target.value)}
                   id="contactMessage"
                   name="contactMessage"
+                  required
                 ></textarea>
               </div>
 
               <div>
-                <button onClick={submitForm} type="submit" className="submit">
+                <button type="submit" className="submit">
                   Submit
                 </button>
               </div>

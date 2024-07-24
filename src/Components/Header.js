@@ -55,11 +55,6 @@ const Header = ({ data }) => {
             </a>
           </li>
           <li>
-            <a className="smoothscroll" href="#portfolio" onClick={closeMenu}>
-              Works
-            </a>
-          </li>
-          <li>
             <a className="smoothscroll" href="#testimonials" onClick={closeMenu}>
               Testimonials
             </a>

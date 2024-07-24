@@ -794,271 +794,309 @@ call-to-action .button {
 	color: #D8D8D8;
 }
 
-/* ------------------------------------------------------------------
-/* g. Testimonials
-/* ------------------------------------------------------------------ */
-
+/* Testimonials Section */
 #testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-   background-attachment: fixed;
-
+   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+   padding: 96px 0 66px;
+   color: var(--text-color);
+   text-align: center;
    position: relative;
-   min-height: 200px;
-   width: 100%;
-   overflow: hidden;
-}
-#testimonials .text-container {
-   padding-top: 96px;
-   padding-bottom: 66px;
-}
-#testimonials h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+ }
+ 
+ #testimonials::before {
+   content: "“";
+   font-size: 10rem;
+   color: rgba(255, 255, 255, 0.1);
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   z-index: 1;
+ }
+ 
+ #testimonials .text-container {
+   max-width: 800px;
+   margin: 0 auto;
+   position: relative;
+   z-index: 2;
+ }
+ 
+ #testimonials h1 {
+   font-size: 2rem;
    text-transform: uppercase;
-   letter-spacing: 3px;
-   color: #fff;
-}
-#testimonials h1 span { display: none; }
-#testimonials .header-col { padding-top: 9px; }
-#testimonials .header-col h1:before {
-   font-family: 'FontAwesome';
-   content: "\f10d";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
-   color: #fff;
-}
-
-/*	Blockquotes */
-#testimonials blockquote {
-   margin: 0 0px 30px 0px;
+   letter-spacing: 1px;
+   margin-bottom: 1rem;
+   color: var(--text-color);
+ }
+ 
+ #testimonials h1 span {
+   border-bottom: 3px solid var(--accent-color);
+   padding-bottom: 6px;
+ }
+ 
+ #testimonials blockquote {
+   margin: 0 0 30px 0;
    padding-left: 0;
    position: relative;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-}
-#testimonials blockquote:before { content: none; }
-#testimonials blockquote p {
+   color: var(--text-secondary-color);
+ }
+ 
+ #testimonials blockquote p {
    font-family: 'librebaskerville-italic', serif;
-   padding: 0;
-   font-size: 24px;
-   line-height: 48px;
-   color: #fff
-}
-#testimonials blockquote cite {
-   display: block;
-   font-size: 12px;
-   font-style: normal;
-   line-height: 18px;
-   color: #fff;
-}
-#testimonials blockquote cite:before { content: "\2014 \0020"; }
-#testimonials blockquote cite a,
-#testimonials blockquote cite a:visited { color: #8B9798; border: none }
-
-/* Flex Slider
-/* ------------------------------------------------------------------ */
-
-/* Reset */
-.flexslider a:active,
-.flexslider a:focus  { outline: none; }
-.slides,
-.flex-control-nav,
-.flex-direction-nav { margin: 0; padding: 0; list-style: none; }
-.slides li { margin: 0; padding: 0;}
-
-/* Necessary Styles */
-.flexslider {
-   position: relative;
-   zoom: 1;
+   font-size: 1.5rem;
+   line-height: 1.8;
+   color: var(--text-color);
    margin: 0;
+ }
+ 
+ #testimonials blockquote cite {
+   display: block;
+   font-size: 1rem;
+   font-style: normal;
+   color: var(--text-secondary-color);
+   margin-top: 10px;
+ }
+ 
+ #testimonials .flex-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ #testimonials .slides {
+   list-style: none;
    padding: 0;
-}
-.flexslider .slides { zoom: 1; }
-.flexslider .slides > li { position: relative; }
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
-/* Suggested container for slide animation setups. Can replace this with your own */
-.flex-container { zoom: 1; position: relative; }
-
-/* Clearfix for .slides */
-.slides:before,
-.slides:after {
-   content: " ";
-   display: table;
-}
-.slides:after {
-   clear: both;
-}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
-.no-js .slides > li:first-child { display: block; }
-
-/* Slider Styles */
-.slides { zoom: 1; }
-.slides > li {
-   /*margin-right: 5px; */
-   overflow: hidden;
-}
-
-/* Control Nav */
-.flex-control-nav {
-    width: 100%;
-    position: absolute;
-    bottom: -20px;
-    text-align: left;
-}
-.flex-control-nav li {
-    margin: 0 6px;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-}
-.flex-control-paging li a {
-    width: 12px;
-    height: 12px;
-    display: block;
-    background: #ddd;
-    background: rgba(255, 255, 255, .3);
-    cursor: pointer;
-    text-indent: -9999px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
-    box-shadow: inset 0 0 3px rgba(255, 255, 255, .3);
-}
-.flex-control-paging li a:hover {
-    background: #CCC;
-    background: rgba(255, 255, 255, .7);
-}
-.flex-control-paging li a.flex-active {
-    background: #fff;
-    background: rgba(255, 255, 255, .9);
-    cursor: default;
-}
-
-/* ------------------------------------------------------------------ */
-/* h. Contact Section
-/* ------------------------------------------------------------------ */
-
+   margin: 0;
+   width: 100%;
+ }
+ 
+ #testimonials .slides li {
+   display: none;
+ }
+ 
+ #testimonials .slides li:first-child {
+   display: block;
+ }
+ 
+ /* Flex Slider Navigation */
+ .flex-control-nav {
+   text-align: center;
+   margin-top: 20px;
+ }
+ 
+ .flex-control-nav li {
+   display: inline-block;
+   margin: 0 5px;
+ }
+ 
+ .flex-control-paging li a {
+   display: block;
+   width: 12px;
+   height: 12px;
+   background: rgba(255, 255, 255, 0.3);
+   border-radius: 50%;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+ 
+ .flex-control-paging li a:hover {
+   background: rgba(255, 255, 255, 0.7);
+ }
+ 
+ .flex-control-paging li a.flex-active {
+   background: rgba(255, 255, 255, 0.9);
+ }
+ 
+ @media (max-width: 768px) {
+   #testimonials h1 {
+     font-size: 1.5rem;
+   }
+ 
+   #testimonials blockquote p {
+     font-size: 1.2rem;
+   }
+ 
+   #testimonials blockquote cite {
+     font-size: 0.9rem;
+   }
+ }
+ 
+//* Contact Section */
+/* Contact Section */
 #contact {
-   background: #191919;
+   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
-}
-#contact .section-head { margin-bottom: 42px; }
-
-#contact a, #contact a:visited  { color: #11ABB0; }
-#contact a:hover, #contact a:focus { color: #fff; }
-
-#contact h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+   color: var(--text-color);
+   text-align: center;
+ }
+ 
+ #contact .section-head {
+   margin-bottom: 42px;
+   text-align: center;
+ }
+ 
+ #contact a,
+ #contact a:visited {
+   color: var(--text-color);
+   transition: color 0.3s ease;
+ }
+ 
+ #contact a:hover,
+ #contact a:focus {
+   color: var(--hover-color);
+ }
+ 
+ #contact h1 {
+   font-size: 2rem;
    text-transform: uppercase;
-   letter-spacing: 3px;
-   color: #EBEEEE;
-   margin-bottom: 6px;
-}
-#contact h1 span { display: none; }
-#contact h1:before {
-   font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
+   letter-spacing: 1px;
+   margin-bottom: 1rem;
+   color: var(--text-color);
+ }
+ 
+ #contact h1 span {
+   border-bottom: 3px solid var(--accent-color);
+   padding-bottom: 6px;
+ }
+ 
+ #contact p.lead {
+   font-size: 1.2rem;
+   max-width: 800px;
+   margin: 0 auto 2rem auto;
+ }
+ 
+ #contact .header-col {
+   padding-top: 6px;
+ }
+ 
+ #contact form {
+   margin-bottom: 30px;
    text-align: left;
-   float: left;
-   color: #ebeeee;
-}
-
-#contact h4 {
-   font: 16px/24px 'opensans-bold', sans-serif;
-   color: #EBEEEE;
-   margin-bottom: 6px;
-}
-#contact p.lead {
-   font: 18px/36px 'opensans-light', sans-serif;
-   padding-right: 3%;
-}
-#contact .header-col { padding-top: 6px; }
-
-
-/* contact form */
-#contact form { margin-bottom: 30px; }
-#contact label {
-   font: 15px/24px 'opensans-bold', sans-serif;
+ }
+ 
+ #contact label {
+   font-size: 1rem;
    margin: 12px 0;
-   color: #EBEEEE;
-	display: inline-block;
-	float: left;
-   width: 26%;
-}
-#contact input,
-#contact textarea,
-#contact select {
+   color: var(--text-color);
+   display: block;
+   text-align: left;
+ }
+ 
+ #contact input,
+ #contact textarea,
+ #contact select {
    padding: 18px 20px;
-	color: #eee;
-	background: #373233;
-	margin-bottom: 42px;
-	border: 0;
-	outline: none;
-   font-size: 15px;
-   line-height: 24px;
-   width: 65%;
-}
-#contact input:focus,
-#contact textarea:focus,
-#contact select:focus {
-	color: #fff;
-	background-color: #11ABB0;
-}
-#contact button.submit {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color:#fff;
-   background: #0D0D0D;
-	border: none;
+   color: #eee;
+   background: rgba(255, 255, 255, 0.1);
+   margin-bottom: 42px;
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   outline: none;
+   font-size: 1rem;
+   width: 100%;
+   border-radius: 5px;
+   transition: background 0.3s ease, border 0.3s ease;
+ }
+ 
+ #contact input:focus,
+ #contact textarea:focus,
+ #contact select:focus {
+   color: #fff;
+   background-color: rgba(255, 255, 255, 0.2);
+   border: 1px solid var(--accent-color);
+ }
+ 
+ #contact button.submit {
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color: var(--text-color);
+   background: var(--accent-color);
+   border: none;
    cursor: pointer;
-   height: auto;
+   padding: 15px 30px;
    display: inline-block;
-	border-radius: 3px;
-   margin-left: 26%;
-}
-#contact button.submit:hover {
-	color: #0D0D0D;
-	background: #fff;
-}
-#contact span.required {
-	color: #11ABB0;
-	font-size: 13px;
-}
-#message-warning, #message-success {
+   border-radius: 5px;
+   transition: background 0.3s ease, color 0.3s ease;
+ }
+ 
+ #contact button.submit:hover {
+   color: var(--accent-color);
+   background: var(--text-color);
+ }
+ 
+ #contact span.required {
+   color: var(--accent-color);
+   font-size: 13px;
+ }
+ 
+ #message-warning,
+ #message-success {
    display: none;
-	background: #0F0F0F;
-	padding: 24px 24px;
-	margin-bottom: 36px;
-   width: 65%;
-   margin-left: 26%;
-}
-#message-warning { color: #D72828; }
-#message-success { color: #11ABB0; }
-
-#message-warning i,
-#message-success i {
+   background: rgba(255, 255, 255, 0.1);
+   padding: 24px;
+   margin-bottom: 36px;
+   width: 100%;
+   border-radius: 5px;
+   color: var(--text-color);
+ }
+ 
+ #message-warning {
+   color: #d72828;
+ }
+ 
+ #message-success {
+   color: var(--accent-color);
+ }
+ 
+ #message-warning i,
+ #message-success i {
    margin-right: 10px;
-}
-#image-loader {
-   display: none;
-   position: relative;
-   left: 18px;
-   top: 17px;
-}
+ }
+ 
+ #contact .footer-widgets {
+   text-align: left;
+ }
+ 
+ #contact .footer-widgets .widget {
+   margin-bottom: 42px;
+ }
+ 
+ #contact .address {
+   font-size: 1rem;
+   line-height: 1.8;
+ }
+ 
+ @media (max-width: 768px) {
+   #contact .eight.columns,
+   #contact .four.columns {
+     width: 100%;
+     padding: 0;
+   }
+ 
+   #contact h1 {
+     font-size: 1.5rem;
+   }
+ 
+   #contact p.lead {
+     font-size: 1rem;
+   }
+ 
+   #contact label,
+   #contact input,
+   #contact textarea {
+     width: 100%;
+   }
+ 
+   #contact form div {
+     width: 100%;
+     margin-bottom: 20px;
+   }
+ 
+   #contact .footer-widgets {
+     text-align: center;
+   }
+ }
+ 
 
 
 /* Twitter Feed */
