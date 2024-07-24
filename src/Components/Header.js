@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TypeWriter from "react-typewriter";
 
 const Header = ({ data }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
+  }, [menuOpen]);
+
   if (data) {
     var name = data.name;
     var occupation = data.occupation;
@@ -10,7 +16,7 @@ const Header = ({ data }) => {
     var networks = data.social.map(function (network) {
       return (
         <li key={network.name}>
-          <a href={network.url}>
+          <a href={network.url} target="_blank" rel="noopener noreferrer">
             <i className={network.className}></i>
           </a>
         </li>
@@ -18,44 +24,48 @@ const Header = ({ data }) => {
     });
   }
 
-  return (
-    <header id="home">
-      <nav id="nav-wrap">
-        <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-          Show navigation
-        </a>
-        <a className="mobile-btn" href="#home" title="Hide navigation">
-          Hide navigation
-        </a>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  return (
+    <header id="home" className={menuOpen ? "menu-open" : ""}>
+      <nav id="nav-wrap" className={menuOpen ? "open" : ""}>
+        <button className="mobile-btn" onClick={toggleMenu}>
+          {menuOpen ? "✕" : "☰"}
+        </button>
         <ul id="nav" className="nav">
           <li className="current">
-            <a className="smoothscroll" href="#home">
+            <a className="smoothscroll" href="#home" onClick={closeMenu}>
               Home
             </a>
           </li>
           <li>
-            <a className="smoothscroll" href="#about">
+            <a className="smoothscroll" href="#about" onClick={closeMenu}>
               About
             </a>
           </li>
           <li>
-            <a className="smoothscroll" href="#resume">
+            <a className="smoothscroll" href="#resume" onClick={closeMenu}>
               Resume
             </a>
           </li>
           <li>
-            <a className="smoothscroll" href="#portfolio">
+            <a className="smoothscroll" href="#portfolio" onClick={closeMenu}>
               Works
             </a>
           </li>
           <li>
-            <a className="smoothscroll" href="#testimonials">
+            <a className="smoothscroll" href="#testimonials" onClick={closeMenu}>
               Testimonials
             </a>
           </li>
           <li>
-            <a className="smoothscroll" href="#contact">
+            <a className="smoothscroll" href="#contact" onClick={closeMenu}>
               Contact
             </a>
           </li>
@@ -68,7 +78,8 @@ const Header = ({ data }) => {
             <TypeWriter typing={0.5}>{name ? `I'm ${name}.` : null}</TypeWriter>
           </h1>
           <h3>
-            Based in {city}. <span>{occupation}</span>. {description}.
+            {/* Based in {city}. <span>{occupation}</span>. {description}. */}
+            Turning coffee into code, <span>one line at a time</span>. Passionate about building the future with Code.
           </h3>
           <hr />
           <ul className="social">{networks}</ul>
